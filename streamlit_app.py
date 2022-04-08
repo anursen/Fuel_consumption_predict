@@ -34,9 +34,9 @@ st.write('Your optimum travel speed is: ',result)
 fig, ax = plt.subplots()
 ax.plot(speed_series,cost_series)
 
-plt.title("Speed vs Cost of Total Trip")
+plt.title("Speed vs Cost perMile")
 plt.xlabel("Speed")
-plt.ylabel("Cost for This Trip")
+plt.ylabel("Cost perMile")
 plt.grid()
 
 st.pyplot(fig)
