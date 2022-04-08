@@ -27,15 +27,15 @@ cost_series = calculate_cost_of_travel_time(Hourly_rate,Distance_to_work,speed_s
 cost_of_time_series = calculate_cost_of_travel_time(Hourly_rate,Distance_to_work,mpg_series)
 
 result = round(float(speed_series[np.where(cost_series == cost_series.min())]),2)
-st.text(result)
+st.text('Your optimum travel speed is: ',result)
 
 
 fig, ax = plt.subplots()
 ax.plot(speed_series,cost_series)
 
-plt.title("Optimum Speed for Traveling")
-plt.xlabel("Velocity")
-plt.ylabel("Cost for This Travel")
+plt.title("Speed vs Cost of Total Trip")
+plt.xlabel("Speed")
+plt.ylabel("Cost for This Trip")
 plt.grid()
 
 st.pyplot(fig)
