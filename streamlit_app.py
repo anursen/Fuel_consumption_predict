@@ -1,8 +1,5 @@
 import streamlit as st
 import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-import pandas as pd
 
 def calculate_mpg(actual_mpg,velocity):
   mpg = (-0.00062 * actual_mpg**2 + 0.01345*actual_mpg - 0.34192) * velocity + 0.0533*actual_mpg**2 - 0.3580* actual_mpg + 30.0424 
