@@ -17,7 +17,6 @@ def calc_gas_cost(total_distance,mpg,gas_price=4,):
 
 st.title('Crusing Speed Affects Your Fuel Consumption, But How Much?')
 
-st.image('./header.png')
 
 Distance_to_work = st.slider('Travel Distance',0, 100, 1,20)
 Gas_Price = st.slider('Gas Price',0.0,10.0, 4.1)
