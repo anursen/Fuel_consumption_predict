@@ -27,7 +27,7 @@ cost_series = calculate_cost_of_travel_time(Hourly_rate,Distance_to_work,speed_s
 cost_of_time_series = calculate_cost_of_travel_time(Hourly_rate,Distance_to_work,mpg_series)
 
 result = round(float(speed_series[np.where(cost_series == cost_series.min())]),2)
-st.text('Your optimum travel speed is: ',result)
+st.write('Your optimum travel speed is: ',result)
 
 
 fig, ax = plt.subplots()
