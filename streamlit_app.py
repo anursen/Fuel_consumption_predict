@@ -23,7 +23,7 @@ Distance_to_work = st.slider('Travel Distance',0, 100, 1,20)
 Gas_Price = st.slider('Gas Price',0.0,10.0, 4.1)
 Hourly_rate = st.slider('Hourly Salary or Oppurtunity Cost', 0, 100, 13)
 Cars_mpg = st.slider('Your Cars Mpg', 5, 100, 19)
-st.write('You can check your cars mpg from here [fueleconomy.gov](https://www.fueleconomy.gov/))
+
 speed_series = np.linspace(55,90,50)
 mpg_series = calculate_mpg(Cars_mpg,speed_series)
 cost_series = calculate_cost_of_travel_time(Hourly_rate,Distance_to_work,speed_series) + calc_gas_cost(Distance_to_work,mpg_series)
