@@ -1,5 +1,7 @@
 import streamlit as st
 import numpy as np
+import matplotlib.pyplot as plt
+import numpy as np
 
 def calculate_mpg(actual_mpg,velocity):
   mpg = (-0.00062 * actual_mpg**2 + 0.01345*actual_mpg - 0.34192) * velocity + 0.0533*actual_mpg**2 - 0.3580* actual_mpg + 30.0424 
@@ -26,3 +28,16 @@ cost_of_time_series = calculate_cost_of_travel_time(Hourly_rate,Distance_to_work
 
 result = round(float(speed_series[np.where(cost_series == cost_series.min())]),2)
 st.text(result)
+
+
+fig, ax = plt.subplots()
+ax.plot(speed_series,cost_series)
+
+fig.title("Optimum Speed for Traveling")
+fig.xlabel("Velocity")
+fig.ylabel("Cost for This Travel")
+fig.grid()
+
+st.pyplot(fig)
+
+
