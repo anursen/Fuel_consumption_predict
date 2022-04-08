@@ -33,10 +33,10 @@ st.text(result)
 fig, ax = plt.subplots()
 ax.plot(speed_series,cost_series)
 
-fig.title("Optimum Speed for Traveling")
-fig.xlabel("Velocity")
-fig.ylabel("Cost for This Travel")
-fig.grid()
+plt.title("Optimum Speed for Traveling")
+plt.xlabel("Velocity")
+plt.ylabel("Cost for This Travel")
+plt.grid()
 
 st.pyplot(fig)
 
