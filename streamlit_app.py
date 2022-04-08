@@ -15,12 +15,13 @@ def calculate_cost_of_travel_time(hourly_rate,distance,mph):
 def calc_gas_cost(total_distance,mpg,gas_price=4,):
   return total_distance / mpg * gas_price
 
+st.title('Crusing Speed Affects Your Fuel Consumption, But How Much?')
 
-Distance_to_work = st.slider('distance to work',0, 100, 1)
-Gas_Price = st.slider('gas price',0.0,10.0, 4.1)
-Hourly_rate = st.slider('hourly rate', 0, 100, 13)
-Cars_mpg = st.slider('mpg', 5, 100, 30)
-
+Distance_to_work = st.slider('Travel Distance',0, 100, 1)
+Gas_Price = st.slider('Gas Price',0.0,10.0, 4.1)
+Hourly_rate = st.slider('Hourly Salary or Oppurtunity Cost', 0, 100, 13)
+Cars_mpg = st.slider('Your Cars Mpg', 5, 100, 30)
+st.write('You can check your cars mpg from here')
 speed_series = np.linspace(55,90,50)
 mpg_series = calculate_mpg(Cars_mpg,speed_series)
 cost_series = calculate_cost_of_travel_time(Hourly_rate,Distance_to_work,speed_series) + calc_gas_cost(Distance_to_work,mpg_series)
