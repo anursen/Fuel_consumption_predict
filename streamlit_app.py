@@ -18,9 +18,9 @@ def calc_gas_cost(total_distance,mpg,gas_price=4,):
 st.title('Crusing Speed Affects Your Fuel Consumption, But How Much?')
 
 
-Distance_to_work = st.slider('Travel Distance',0, 100, 1,20)
+Distance_to_work = st.slider('Travel Distance',0, 100, 1)
 Gas_Price = st.slider('Gas Price',0.0,10.0, 4.1)
-Hourly_rate = st.slider('Hourly Salary or Oppurtunity Cost', 0, 100, 13)
+Hourly_rate = st.slider('Hourly Salary or Opportunity Cost', 0, 100, 13)
 Cars_mpg = st.slider('Your Cars Mpg', 5, 100, 19)
 
 speed_series = np.linspace(55,90,50)
